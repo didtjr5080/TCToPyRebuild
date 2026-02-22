@@ -1,0 +1,117 @@
+{
+  "selected_player_id": "char_2",
+  "players": {
+    "char_0": {
+      "player_state": {
+        "level": 5,
+        "exp": 2,
+        "exp_to_next": 70,
+        "stat_points": 12,
+        "allocated_stats": {},
+        "hp": 1000
+      },
+      "inventory": {
+        "iron_armor": 1
+      },
+      "equipment": {
+        "weapon": null,
+        "armor": null,
+        "accessory": null
+      },
+      "dungeon_progress": {
+        "unlocked_zones": [
+          "1",
+          "2"
+        ],
+        "unlocked_stage_by_zone": {
+          "1": 5,
+          "2": 1
+        }
+      }
+    },
+    "char_1": {
+      "player_state": {
+        "level": 6,
+        "exp": 22,
+        "exp_to_next": 80,
+        "stat_points": 4,
+        "allocated_stats": {
+          "attack": 16
+        },
+        "hp": 500
+      },
+      "inventory": {
+        "potion_small": 1,
+        "iron_sword": 1,
+        "stun_charm": 1
+      },
+      "equipment": {
+        "weapon": null,
+        "armor": null,
+        "accessory": null
+      },
+      "dungeon_progress": {
+        "unlocked_zones": [
+          "1",
+          "2"
+        ],
+        "unlocked_stage_by_zone": {
+          "1": 5,
+          "2": 1
+        }
+      }
+    },
+    "char_2": {
+      "player_state": {
+        "level": 2,
+        "exp": 16,
+        "exp_to_next": 40,
+        "stat_points": 4,
+        "allocated_stats": {},
+        "hp": 500
+      },
+      "inventory": {
+        "antistun": 2
+      },
+      "equipment": {
+        "weapon": null,
+        "armor": null,
+        "accessory": "great_Sage's_staff"
+      },
+      "dungeon_progress": {
+        "unlocked_zones": [
+          "1"
+        ],
+        "unlocked_stage_by_zone": {
+          "1": 4
+        }
+      }
+    },
+    "char_3": {
+      "player_state": {
+        "level": 1,
+        "exp": 20,
+        "exp_to_next": 30,
+        "stat_points": 0,
+        "allocated_stats": {},
+        "hp": 300
+      },
+      "inventory": {
+        "potion_small": 1
+      },
+      "equipment": {
+        "weapon": null,
+        "armor": null,
+        "accessory": null
+      },
+      "dungeon_progress": {
+        "unlocked_zones": [
+          "1"
+        ],
+        "unlocked_stage_by_zone": {
+          "1": 2
+        }
+      }
+    }
+  }
+}

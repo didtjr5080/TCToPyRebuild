@@ -1,0 +1,22 @@
+{
+  "zones": {
+    "1": {
+      "stages": {
+        "1": {"monster_pool": ["slime"], "exp": 10},
+        "2": {"monster_pool": ["slime"], "exp": 12},
+        "3": {"monster_pool": ["slime"], "exp": 14},
+        "4": {"monster_pool": ["slime"], "exp": 16},
+        "5": {"boss_id": "zone1_boss", "exp": 30}
+      }
+    },
+    "2": {
+      "stages": {
+        "1": {"monster_pool": ["slime"], "exp": 10},
+        "2": {"monster_pool": ["slime"], "exp": 12},
+        "3": {"monster_pool": ["slime"], "exp": 14},
+        "4": {"monster_pool": ["slime"], "exp": 16},
+        "5": {"boss_id": "zone1_boss", "exp": 30}
+      }
+    }
+  }
+}

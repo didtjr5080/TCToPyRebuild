@@ -1,0 +1,122 @@
+{
+  "items": {
+    "iron_sword": {
+      "name": "철검",
+      "type": "equipment",
+      "rarity": "common",
+      "desc": "초보 모험가가 애용하는 기본 철제 검.",
+      "icon": null,
+      "slot": "weapon",
+      "stats": {"attack": 5, "magic": 0, "defense": 0, "magic_resist": 0, "max_hp": 0},
+      "special": null,
+      "use_effect": null
+    },
+    "iron_armor": {
+      "name": "철갑옷",
+      "type": "equipment",
+      "rarity": "common",
+      "desc": "탄탄한 철판으로 만든 갑옷. 기본 방어를 올려준다.",
+      "icon": null,
+      "slot": "armor",
+      "stats": {"attack": 0, "magic": 0, "defense": 6, "magic_resist": 0, "max_hp": 40},
+      "special": null,
+      "use_effect": null
+    },
+    "stun_charm": {
+      "name": "기절의 부적",
+      "type": "equipment",
+      "rarity": "rare",
+      "desc": "타격 시 낮은 확률로 적을 기절시키는 부적.",
+      "icon": null,
+      "slot": "accessory",
+      "stats": {"attack": 0, "magic": 0, "defense": 0, "magic_resist": 0, "max_hp": 0},
+      "special": {"type": "on_hit", "chance": 0.3, "effect": "stun", "duration": 1},
+      "use_effect": null
+    },
+
+    "great_Sage's_staff": {
+      "name": "대현자의 지팡이",
+      "type": "equipment",
+      "rarity": "epic",
+      "desc": "주문력을 집중시켜 마법 공격력을 20% 높여주는 특수 장신구.",
+      "icon": null,
+      "slot": "accessory",
+      "stats": {"attack": 0, "magic": 50, "defense": 0, "magic_resist": 2, "max_hp": 0},
+      "special": {"type": "stat_multiplier", "stat": "magic", "mult": 1.2},
+      "use_effect": null
+    },
+
+    "potion_small": {
+      "name": "소형 포션",
+      "type": "consumable",
+      "rarity": "common",
+      "desc": "체력을 소량 회복한다.",
+      "icon": null,
+      "slot": null,
+      "stats": {"attack": 0, "magic": 0, "defense": 0, "magic_resist": 0, "max_hp": 0},
+      "special": null,
+      "use_effect": {"type": "heal", "target": "self", "power": 80, "remove": [], "duration": 0, "stats": {}, "scope": "battle"}
+    },
+    "potion_big": {
+      "name": "대형 포션",
+      "type": "consumable",
+      "rarity": "rare",
+      "desc": "체력을 크게 회복한다.",
+      "icon": null,
+      "slot": null,
+      "stats": {"attack": 0, "magic": 0, "defense": 0, "magic_resist": 0, "max_hp": 0},
+      "special": null,
+      "use_effect": {"type": "heal", "target": "self", "power": 200, "remove": [], "duration": 0, "stats": {}, "scope": "battle"}
+    },
+    "antibleed": {
+      "name": "응급 지혈제",
+      "type": "consumable",
+      "rarity": "common",
+      "desc": "출혈 상태를 즉시 멈춘다.",
+      "icon": null,
+      "slot": null,
+      "stats": {"attack": 0, "magic": 0, "defense": 0, "magic_resist": 0, "max_hp": 0},
+      "special": null,
+      "use_effect": {"type": "cleanse", "target": "self", "power": 0, "remove": ["bleed"], "duration": 0, "stats": {}, "scope": "battle"}
+    },
+    "antistun": {
+      "name": "정신 각성제",
+      "type": "consumable",
+      "rarity": "rare",
+      "desc": "기절 상태를 해제하거나 방지한다.",
+      "icon": null,
+      "slot": null,
+      "stats": {"attack": 0, "magic": 0, "defense": 0, "magic_resist": 0, "max_hp": 0},
+      "special": null,
+      "use_effect": {"type": "cleanse", "target": "self", "power": 0, "remove": ["stun"], "duration": 0, "stats": {}, "scope": "battle"}
+    },
+
+    "leather_scrap": {
+      "name": "가죽 조각",
+      "type": "material",
+      "rarity": "common",
+      "desc": "잡몹에게서 얻을 수 있는 평범한 재료.",
+      "icon": null,
+      "slot": null,
+      "stats": {"attack": 0, "magic": 0, "defense": 0, "magic_resist": 0, "max_hp": 0},
+      "special": null,
+      "use_effect": null
+    }
+  },
+  "drop_tables": {
+    "zone1_boss_drop": [
+      {"item": "iron_sword", "chance": 0.25, "min": 1, "max": 1},
+      {"item": "iron_armor", "chance": 0.25, "min": 1, "max": 1},
+      {"item": "potion_big", "chance": 0.4, "min": 1, "max": 2}
+    ],
+    "special_boss_abyss": [
+      {"item": "stun_charm", "chance": 0.15, "min": 1, "max": 1},
+      {"item": "antistun", "chance": 0.35, "min": 1, "max": 1},
+      {"item": "great_Sage's_staff", "chance": 0.12, "min": 1, "max": 1}
+    ],
+    "zone1_common": [
+      {"item": "potion_small", "chance": 0.25, "min": 1, "max": 2},
+      {"item": "leather_scrap", "chance": 0.4, "min": 1, "max": 2}
+    ]
+  }
+}

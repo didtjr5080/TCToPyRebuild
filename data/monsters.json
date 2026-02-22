@@ -1,0 +1,11 @@
+{
+  "monsters": {
+    "slime": {
+      "name": "슬라임",
+      "stats": {"attack": 6, "defense": 2, "max_hp": 300, "magic": 0, "magic_resist": 0},
+      "ai": "basic",
+      "skills": [],
+      "gimmicks": []
+    }
+  }
+}

@@ -1,0 +1,191 @@
+{
+  "skills": {
+    "skill_검의_신판": {
+      "name": "검의 신판",
+      "type": "hybrid",
+      "base_physical": 0,
+      "base_magic": 50,
+      "scale": { "attack": 0.2, "magic": 0.0 },
+      "cost": 0,
+      "cooldown": 0,
+      "apply_effect": null
+    },
+    "skill_강력한_의지": {
+      "name": "강력한 의지",
+      "type": "physical",
+      "base_physical": 0,
+      "base_magic": 0,
+      "scale": { "attack": 0.0, "magic": 0.0 },
+      "cost": 0,
+      "cooldown": 0,
+      "apply_effect": {"type": "buff_stats", "target": "self", "chance": 1.0, "duration": 3, "power": 0, "stats": {"defense": 15, "magic_resist": 15}, "scope": "battle"}
+    },
+    "skill_근력강화": {
+      "name": "근력강화",
+      "type": "physical",
+      "base_physical": 0,
+      "base_magic": 0,
+      "scale": { "attack": 0.0, "magic": 0.0 },
+      "cost": 0,
+      "cooldown": 0,
+      "apply_effect": {"type": "buff_stats", "target": "self", "chance": 1.0, "duration": 3, "power": 0, "stats": {"attack": 12}, "scope": "battle"}
+    },
+    "skill_분노의_일격": {
+      "name": "분노의 일격",
+      "type": "hybrid",
+      "base_physical": 150,
+      "base_magic": 0,
+      "scale": { "attack": 0.0, "magic": 0.5 },
+      "cost": 0,
+      "cooldown": 0,
+      "apply_effect": {"type": "bleed", "target": "enemy", "chance": 0.6, "duration": 3, "power": 6, "scope": "battle"}
+    },
+
+    "skill_난사": {
+      "name": "난사",
+      "type": "physical",
+      "base_physical": 30,
+      "base_magic": 0,
+      "scale": { "attack": 0.3, "magic": 0.0 },
+      "cost": 0,
+      "cooldown": 0,
+      "apply_effect": null
+    },
+    "skill_구르기": {
+      "name": "구르기",
+      "type": "physical",
+      "base_physical": 0,
+      "base_magic": 0,
+      "scale": { "attack": 0.0, "magic": 0.0 },
+      "cost": 0,
+      "cooldown": 0,
+      "apply_effect": {"type": "buff_stats", "target": "self", "chance": 1.0, "duration": 2, "power": 0, "stats": {"defense": 12, "magic_resist": 12}, "scope": "battle"}
+    },
+    "skill_집중": {
+      "name": "집중",
+      "type": "physical",
+      "base_physical": 0,
+      "base_magic": 0,
+      "scale": { "attack": 0.0, "magic": 0.0 },
+      "cost": 0,
+      "cooldown": 0,
+      "apply_effect": {"type": "buff_stats", "target": "self", "chance": 1.0, "duration": 3, "power": 0, "stats": {"attack": 8, "magic": 0}, "scope": "battle"}
+    },
+    "skill_헤드_샷": {
+      "name": "헤드 샷",
+      "type": "physical",
+      "base_physical": 200,
+      "base_magic": 0,
+      "scale": { "attack": 0.5, "magic": 0.0 },
+      "cost": 0,
+      "cooldown": 0,
+      "apply_effect": {"type": "stun", "target": "enemy", "chance": 0.25, "duration": 1, "power": 0, "scope": "battle"}
+    },
+
+    "skill_피의사슬": {
+      "name": "피의사슬",
+      "type": "magic",
+      "base_physical": 0,
+      "base_magic": 50,
+      "scale": { "attack": 0.0, "magic": 0.2 },
+      "cost": 0,
+      "cooldown": 0,
+      "apply_effect": {"type": "bleed", "target": "enemy", "chance": 0.7, "duration": 3, "power": 5, "scope": "battle"}
+    },
+    "skill_신체혈화": {
+      "name": "신체혈화",
+      "type": "physical",
+      "base_physical": 0,
+      "base_magic": 0,
+      "scale": { "attack": 0.0, "magic": 0.0 },
+      "cost": 0,
+      "cooldown": 0,
+      "apply_effect": {"type": "heal", "target": "self", "chance": 1.0, "duration": 0, "power": 40, "scope": "battle"}
+    },
+    "skill_블러드스피어": {
+      "name": "블러드스피어",
+      "type": "magic",
+      "base_physical": 0,
+      "base_magic": 200,
+      "scale": { "attack": 0.0, "magic": 0.8 },
+      "cost": 0,
+      "cooldown": 0,
+      "apply_effect": {"type": "debuff_stats", "target": "enemy", "chance": 1.0, "duration": 3, "power": 0, "stats": {"magic_resist": -10}, "scope": "battle"}
+    },
+    "skill_흡혈": {
+      "name": "흡혈",
+      "type": "magic",
+      "base_physical": 0,
+      "base_magic": 10,
+      "scale": { "attack": 0.0, "magic": 0.0 },
+      "cost": 0,
+      "cooldown": 0,
+      "apply_effect": {"type": "lifesteal", "target": "self", "chance": 1.0, "duration": 0, "power": 0.25, "scope": "battle"}
+    },
+
+    "skill_은신": {
+      "name": "은신",
+      "type": "hybrid",
+      "base_physical": 0,
+      "base_magic": 50,
+      "scale": { "attack": 0.5, "magic": 0.0 },
+      "cost": 0,
+      "cooldown": 0,
+      "apply_effect": [
+        {"type": "buff_stats", "target": "self", "chance": 1.0, "duration": 2, "power": 0, "stats": {"attack": 10}, "scope": "battle"},
+        {"type": "buff_stats", "target": "self", "chance": 1.0, "duration": 2, "power": 0, "stats": {"defense": 8}, "scope": "battle"}
+      ]
+    },
+    "skill_목긋기": {
+      "name": "목긋기",
+      "type": "physical",
+      "base_physical": 10,
+      "base_magic": 0,
+      "scale": { "attack": 0.0, "magic": 0.0 },
+      "cost": 0,
+      "cooldown": 0,
+      "apply_effect": {"type": "bleed", "target": "enemy", "chance": 0.8, "duration": 2, "power": 7, "scope": "battle"}
+    },
+    "skill_독살": {
+      "name": "독살",
+      "type": "hybrid",
+      "base_physical": 20,
+      "base_magic": 0,
+      "scale": { "attack": 0.0, "magic": 0.0 },
+      "cost": 0,
+      "cooldown": 0,
+      "apply_effect": {"type": "bleed", "target": "enemy", "chance": 1.0, "duration": 4, "power": 4, "scope": "battle"}
+    },
+    "skill_협박": {
+      "name": "협박",
+      "type": "magic",
+      "base_physical": 0,
+      "base_magic": 0,
+      "scale": { "attack": 0.0, "magic": 0.9 },
+      "cost": 0,
+      "cooldown": 0,
+      "apply_effect": {"type": "debuff_stats", "target": "enemy", "chance": 1.0, "duration": 2, "power": 0, "stats": {"attack": -10, "defense": -5}, "scope": "battle"}
+    },
+
+    "enemy_skill_응애": {
+      "name": "응애",
+      "type": "magic",
+      "base_physical": 0,
+      "base_magic": 5,
+      "scale": { "attack": 0.0, "magic": 0.5 },
+      "cost": 0,
+      "cooldown": 0,
+      "apply_effect": {"type": "stun", "target": "enemy", "chance": 0.1, "duration": 1, "power": 0, "scope": "battle"}
+    },
+    "enemy_skill_때리기": {
+      "name": "때리기",
+      "type": "physical",
+      "base_physical": 10,
+      "base_magic": 0,
+      "scale": { "attack": 0.2, "magic": 0.0 },
+      "cost": 0,
+      "cooldown": 0,
+      "apply_effect": null
+    }
+  }
+}

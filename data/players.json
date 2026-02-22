@@ -1,0 +1,25 @@
+{
+  "default_player_id": "char_0",
+  "players": {
+    "char_0": {
+      "name": "아서",
+      "base_stats": { "attack": 15, "magic": 20, "defense": 60, "magic_resist": 60, "max_hp": 1000 },
+      "skills": ["skill_검의_신판", "skill_강력한_의지", "skill_근력강화", "skill_분노의_일격"]
+    },
+    "char_1": {
+      "name": "미스터 톰",
+      "base_stats": { "attack": 30, "magic": 10, "defense": 5, "magic_resist": 5, "max_hp": 500 },
+      "skills": ["skill_난사", "skill_구르기", "skill_집중", "skill_헤드_샷"]
+    },
+    "char_2": {
+      "name": "블랜",
+      "base_stats": { "attack": 10, "magic": 50, "defense": 30, "magic_resist": 30, "max_hp": 500 },
+      "skills": ["skill_피의사슬", "skill_신체혈화", "skill_블러드스피어", "skill_흡혈"]
+    },
+    "char_3": {
+      "name": "섀도어",
+      "base_stats": { "attack": 50, "magic": 50, "defense": 0, "magic_resist": 0, "max_hp": 300 },
+      "skills": ["skill_은신", "skill_목긋기", "skill_독살", "skill_협박"]
+    }
+  }
+}
