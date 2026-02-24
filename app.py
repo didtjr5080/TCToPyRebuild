@@ -15,11 +15,16 @@ from core.combat import BattleEngine
 from core import items as items_util
 from core.dungeon import DungeonProgress
 from core.data_store import DataStore
+from core.auto_patcher import AutoPatcher
+from core.auth_manager import AuthManager
+from ui.login_widget import LoginWidget
+from ui.loading_widget import LoadingWidget
 from ui.main_window import MainWindow
 
 BASE_DIR = Path(__file__).parent
 DATA_DIR = BASE_DIR / "data"
 SAVE_PATH = BASE_DIR / "save" / "progress.json"
+GITHUB_RAW_BASE = os.getenv("GITHUB_RAW_BASE_URL", "https://raw.githubusercontent.com/user/repo/main/")
 
 
 class GameController:
@@ -309,16 +314,58 @@ class GameController:
         self.save()
 
 
+class AppWindow(QtWidgets.QMainWindow):
+    """로그인 -> 패치 -> 메인 순서를 관리하는 상위 창."""
+
+    def __init__(self, patcher: AutoPatcher, parent: Optional[QtWidgets.QWidget] = None) -> None:
+        super().__init__(parent)
+        self.setWindowTitle("TCToPyRebuild")
+        self.resize(900, 600)
+
+        self.auth = AuthManager()
+        self.patcher = patcher
+        self.controller: Optional[GameController] = None
+        self.main_window: Optional[MainWindow] = None
+
+        # 중앙에 QStackedWidget을 두고 화면을 전환한다.
+        self.stack = QtWidgets.QStackedWidget()
+        self.setCentralWidget(self.stack)
+
+        self.login_widget = LoginWidget(self.auth)
+        self.loading_widget = LoadingWidget(self.patcher)
+
+        self.stack.addWidget(self.login_widget)
+        self.stack.addWidget(self.loading_widget)
+
+        # 시그널 연결: 로그인 성공 -> 로딩 화면, 패치 완료 -> 메인 화면
+        self.login_widget.login_successful.connect(self._on_login_success)
+        self.loading_widget.patch_complete.connect(self._on_patch_complete)
+
+        self.stack.setCurrentWidget(self.login_widget)
+
+    def _on_login_success(self) -> None:
+        """로그인 성공 시 패치 화면으로 전환하고 백그라운드 패치 시작."""
+        self.stack.setCurrentWidget(self.loading_widget)
+        self.loading_widget.start_patch()
+
+    def _on_patch_complete(self, ok: bool) -> None:
+        """패치 완료 후 메인 게임 화면 준비.
+
+        Args:
+            ok: 패치 성공 여부 (False라도 로컬 데이터로 계속 진행)
+        """
+        # 패치 결과와 관계없이 게임 데이터를 로드해 메인으로 진입한다.
+        self.controller = GameController()
+        self.main_window = MainWindow(self.controller, parent=self)
+        self.stack.addWidget(self.main_window)
+        self.stack.setCurrentWidget(self.main_window)
+
+
 def main():
     stage = "start"
-    controller: Optional[GameController] = None
     last_player_id = None
     last_monster_id = None
     try:
-        stage = "load_all"
-        controller = GameController()
-        last_player_id = getattr(controller, "selected_player_id", None)
-
         stage = "ui_init"
         app = QtWidgets.QApplication([])
         app.setStyleSheet(
@@ -340,8 +387,11 @@ def main():
             """
         )
 
+        # AutoPatcher는 GitHub Raw에서 manifest/파일을 내려받는다.
+        patcher = AutoPatcher(GITHUB_RAW_BASE, BASE_DIR)
+
         stage = "ui_show"
-        window = MainWindow(controller)
+        window = AppWindow(patcher)
         window.show()
 
         stage = "qt_exec"

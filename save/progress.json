@@ -1,5 +1,5 @@
 {
-  "selected_player_id": "char_2",
+  "selected_player_id": "char_1",
   "players": {
     "char_0": {
       "player_state": {
@@ -64,11 +64,11 @@
     "char_2": {
       "player_state": {
         "level": 2,
-        "exp": 16,
+        "exp": 26,
         "exp_to_next": 40,
         "stat_points": 4,
         "allocated_stats": {},
-        "hp": 500
+        "hp": 483.0
       },
       "inventory": {
         "antistun": 2
