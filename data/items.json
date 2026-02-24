@@ -7,7 +7,7 @@
       "desc": "초보 모험가가 애용하는 기본 철제 검.",
       "icon": null,
       "slot": "weapon",
-      "stats": {"attack": 5, "magic": 0, "defense": 0, "magic_resist": 0, "max_hp": 0},
+      "stats": {"attack": 999, "magic": 0, "defense": 0, "magic_resist": 0, "max_hp": 0},
       "special": null,
       "use_effect": null
     },
