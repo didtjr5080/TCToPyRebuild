@@ -1,9 +1,8 @@
 {
-  "game_version": "1.0.0",
+  "game_version": "1.0.1", 
   "files": {
-    "data/items.json": "1.0",
+    "data/items.json": "1.1", 
     "data/skills.json": "1.0",
     "data/monsters.json": "1.0"
   }
 }
-
