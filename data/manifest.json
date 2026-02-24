@@ -1,5 +1,5 @@
 {
-  "game_version": "1.0.1", 
+  "game_version": "beta 1.0", 
   "files": {
     "data/items.json": "1.1", 
     "data/skills.json": "1.0",
