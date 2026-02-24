@@ -1,1 +1,8 @@
-
+{
+  "game_version": "1.0.1",   // 버전 업!
+  "files": {
+    "data/items.json": "1.1", // 아이템 파일 버전 업!
+    "data/skills.json": "1.0",
+    "data/monsters.json": "1.0"
+  }
+}
